@@ -61,7 +61,7 @@ for (i in 1:N_Iter)
     w_region=as.factor(w_region)
     mean_weight=tapply(gsample[,1],w_region,sum)
     
-    for (j in 1:4)
+    for (j in 1:P+1)
     {
       a=toString(j)
       print(mean_weight[a],a)
