@@ -37,10 +37,13 @@ SBgenerate(10,3,hfr)
 Alpha is strength parameter, it influences the distribution of k(group) and the var of G. 
 
 use function SBgenerate_plots can see the stick-breaking process
- 
- ```
- SBgenerate_plots (num_thetas, alpha)
- ```
 
+```
+SBgenerate_plots (num_thetas, alpha)
+```
+use function CRP_plots can see the Chinese restaurant process
+```
+CRP_plots(num_customer,alpha1,alpha2,alpha3)
+```
 
 
