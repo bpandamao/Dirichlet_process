@@ -6,7 +6,7 @@ Why is nonparametrics?
 Because the piror is a random measure with infinite mixture models(k>>0).
 With the properties of Dirichlet distribution, we use Dirichlet Process(DP) to find the predictive distribution p(x_predict|x).
 
-## Chinese restaurant process
+### Chinese restaurant process
 the clustering property of the DP. It comes out with the group of each observation. 
 An new observaton belongs to each group is equal to n_k(%%the number of each group)/(alpha+n-1), a new group k+1 with probability alpha/(alpha+n-1).
 a similar clustering process is Indian Buffet Process(IBP)
@@ -18,7 +18,7 @@ chinese_restaurant_process(n = 5, alpha = 1)=[1, 2, 3, 4, 3]
 ```
 
 
-## stick-breaking Construction
+### stick-breaking Construction
 to construct the random measure G. It comes out with each parameter and its weights.
 For each group k, this gives a proportion pi of points that fall into group k.
 
@@ -33,7 +33,7 @@ SBgenerate(10,3,hfr)
 ```
 
 
-## the parameters 
+### the parameters 
 Alpha is strength parameter, it influences the distribution of k(group) and the var of G. 
 
 use function SBgenerate_plots can see the stick-breaking process
@@ -46,4 +46,6 @@ use function CRP_plots can see the Chinese restaurant process
 CRP_plots(num_customer,alpha1,alpha2,alpha3)
 ```
 
+### G(A) construction
+the [DP_G_SB.r](DP_G_SB.r) tell the properties of random measure G
 
