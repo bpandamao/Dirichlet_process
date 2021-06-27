@@ -1,4 +1,4 @@
-# crp process
+# CRP process
 # target: returns an array of the table of every customer 
 
 # Examples
