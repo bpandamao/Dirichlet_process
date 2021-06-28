@@ -3,7 +3,7 @@
 
 # Examples
 #
-#   chinese_restaurant_process(n = 5, alpha = 1)=[1, 2, 3, 4, 3]
+#   chinese_restaurant_process(n=5,alpha=1)=[1, 2, 3, 4, 3]
 
 chinese_restaurant_process=function(n,alpha)
 {
