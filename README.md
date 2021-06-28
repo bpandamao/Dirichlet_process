@@ -14,7 +14,7 @@ a similar clustering process is Indian Buffet Process(IBP)
 use the function chinese_restaurant_process(n,alpha) can get the he table of every customer 
 
 ```
-chinese_restaurant_process(n = 5, alpha = 1)=[1, 2, 3, 4, 3]
+chinese_restaurant_process(n=5,alpha=1)=[1, 2, 3, 4, 3]
 ```
 
 
