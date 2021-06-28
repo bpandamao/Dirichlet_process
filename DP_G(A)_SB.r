@@ -1,12 +1,11 @@
-
+# random partition G(A)
+# sampling G -> construct G(A) -> compare mean & var
 # assume H is gaussian
 init_parts =c(seq(-3,3,2))
-x_range = c(seq(-4,4,0.1))
 max_weights = 0.7
 N_Iter=1000
 n=20
 alpha=3
-#rnorm dnorm pnorm
 
 # create random set of partitions
 r_parts_bounds=t(rbind(init_parts[1:length(init_parts)-1],init_parts[-1]))
@@ -22,6 +21,8 @@ runifdgenerate=function(A)
 r_parts=runifdgenerate(r_parts_bounds)
 P=length(r_parts)
 mean_weights = matrix(rep(0),N_Iter, P + 1)
+
+#G(A) theretical mean&var
 
 # theretical mean from CDF
 # p prob
@@ -61,10 +62,9 @@ for (i in 1:N_Iter)
     w_region=as.factor(w_region)
     mean_weight=tapply(gsample[,1],w_region,sum)
     
-    for (j in 1:P+1)
+    for (j in 1:(P+1))
     {
       a=toString(j)
-      print(mean_weight[a],a)
       if (is.na(mean_weight[a]))
       {
         mean_weights[i,j]=0
@@ -75,4 +75,7 @@ for (i in 1:N_Iter)
     }
 }
 
-summary(mean_weights)
+## G(A) sample mean&var
+
+apply(mean_weights,2,mean)
+apply(mean_weights,2,var)
